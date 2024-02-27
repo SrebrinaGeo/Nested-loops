@@ -1,0 +1,9 @@
+number = int(input())
+
+for i in range(1, 10):
+    for j in range(1, 10):
+        for k in range(1, 10):
+            for m in range(1, 10):
+                if i + j == k + m and number % (i + j) == 0:
+                    concatenated_numbers = f"{i}{j}{k}{m}"
+                    print(concatenated_numbers, end=" ")
