@@ -1,0 +1,17 @@
+last_sector = input()
+rows_first_sector = int(input())
+odd_row_seats = int(input())
+counter = 0
+
+for sector in range(ord('A'), ord(last_sector)+1):
+    for row in range(1, rows_first_sector+1):
+        if row % 2 == 0:
+            total_seats = odd_row_seats + 2
+        else:
+            total_seats = odd_row_seats
+        for seat in range(total_seats):
+            seat_letter =  chr(ord('a') + seat)
+            print(f'{chr(sector)}{row}{seat_letter}')
+            counter += 1
+    rows_first_sector += 1
+print(counter)
