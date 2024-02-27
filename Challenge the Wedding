@@ -1,0 +1,14 @@
+men = int(input())
+women = int(input())
+max_tables = int(input())
+counter = 0
+
+for i in range(1, men+1):
+    for j in range(1, women+1):
+        counter += 1
+        concat = f'({i} <-> {j})'
+        print(concat, end=" ")
+        if counter == max_tables:
+            break
+    if counter == max_tables:
+            break
