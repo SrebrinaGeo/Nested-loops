@@ -1,0 +1,10 @@
+coins1_count = int(input())
+coins2_count = int(input())
+notes5_count = int(input())
+total_sum = int(input())
+
+for i in range(0, coins1_count+1):
+    for j in range(0, coins2_count+1):
+        for k in range(0, notes5_count+1):
+            if i * 1 + j * 2 + k * 5 == total_sum:
+                print(f"{i} * 1 lv. + {j} * 2 lv. + {k} * 5 lv. = {total_sum} lv.")
