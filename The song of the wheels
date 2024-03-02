@@ -1,0 +1,22 @@
+control_value = int(input())
+counter = 0
+password_found = False
+password_values = None
+
+for a in range(1, 10):
+    for b in range(1, 10):
+        for c in range(1, 10):
+            for d in range(1, 10):
+                if a < b and c > d and (a * b) + (c * d) == control_value:
+                    counter += 1
+                    print(f"{a}{b}{c}{d}", end=" ")
+                    if counter == 4:
+                        password_found = True
+                        password_values = (a, b, c, d)
+
+if password_found:
+    print()
+    print(f"Password: {''.join(map(str, password_values))}")
+else:
+    print()
+    print("No!")
