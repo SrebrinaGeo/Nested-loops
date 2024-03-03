@@ -1,0 +1,18 @@
+from math import sqrt
+
+start_first = int(input())
+start_second = int(input())
+diff_end_first = int(input())
+diff_end_second = int(input())
+
+
+def is_prime(x):
+    if x <= 1 or (x % 2 == 0 and x > 2):
+        return False
+    return all(x % i for i in range(3, int(sqrt(x)) + 1, 2))
+
+
+for a in range(start_first, start_first+diff_end_first+1):
+    for b in range(start_second, start_second+diff_end_second+1):
+        if is_prime(a) and is_prime(b):
+            print(f'{a}{b}')
